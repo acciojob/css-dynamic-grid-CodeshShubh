@@ -1,8 +1,7 @@
 /*  your css code here. If applicable */
 .grid-container{
-	    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px));
-    gap: 10px; /* optional: adds some space between grid items */
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
 }
 .grid-item{
 	  background-color: lightgray;
@@ -13,4 +12,16 @@
     justify-content: center;
     align-items: center;
 	
+}
+
+@media screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
